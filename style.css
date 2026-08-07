@@ -1,460 +1,395 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
+/* ================= HEADER (this part was already fine) ================= */
 .header{
     display: flex;
-    height: 250px;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 4.5rem;
     background-color: rgb(2, 14, 36);
     color: white;
-    
+    padding: 0.5rem 1rem;
 }
 .location{
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: left;
-    font-size: 3rem;
-    margin-left: 30px;
-    margin-right: 50px;
+    font-size: 1rem;
+    margin-left: 0.6rem;
+    margin-right: 1.2rem;
 }
-.location:hover{
-    cursor: pointer;
-}
-.logo{
-    margin-right: 20px;
-}
-.logo:hover{
-    cursor: pointer;
-}
+.location:hover{ cursor: pointer; }
+.logo{ margin-right: 1rem; }
+.logo:hover{ cursor: pointer; }
+.logo img { height: 2.2rem; width: auto; }
+.small-text{ color: rgb(187, 188, 189); font-size: 0.7rem; }
+.bold-text{ font-size: 0.85rem; }
+.loc { margin-left: 0.6rem; font-size: 1.1rem; }
+.select { height: 2.32rem; width: 3.5rem; font-size: 0.8rem; background-color: rgb(204, 204, 204); margin: 0; }
+.search-bar { display: flex; height: 2.4rem; flex: 1 1 200px; min-width: 200px; padding-left: 0.5rem; }
+#s1 { width: 100%; font-size: 0.9rem; color: rgb(109, 110, 110); min-width: 0; }
+#s2 { width: 3.2rem; height: 2.5rem; font-size: 1.1rem; background-color: rgb(239, 203, 43); flex-shrink: 0; }
+#s2:hover { cursor: pointer; background-color: rgb(244, 155, 47); }
+.flag { margin-left: 1.2rem; }
+.flag img { height: 1.3rem; width: 1.9rem; }
+.flag:hover { cursor: pointer; }
+.lang { font-size: 0.85rem; margin-left: 0.3rem; }
+.lang:hover { cursor: pointer; }
+.sign { display: flex; flex-direction: column; margin-left: 1.5rem; }
+.sign:hover { cursor: pointer; }
+.small { font-size: 0.7rem; }
+.big { font-size: 0.85rem; white-space: nowrap; }
+.return { display: flex; flex-direction: column; margin-left: 1.5rem; }
+.return:hover { cursor: pointer; }
+.ret { font-size: 0.7rem; }
+.order { font-size: 0.85rem; }
+.cart { display: flex; flex-direction: row; align-items: center; margin-left: 1.5rem; margin-right: 1rem; font-size: 1.4rem; }
+.cart:hover { cursor: pointer; }
+.cartt { margin-left: 0.3rem; font-size: 0.9rem; }
 
-.small-text{
-    color: rgb(187, 188, 189);
-    font-size: 3rem;
-}
-
-.bold-text{
-    font-size: 4rem;
-}
-.loc{
-    margin-top: 115px;
-    margin-left: 20px;
-    height: 50px;
-    width: 40px;
-    font-size: 3rem;
-}
-.select{
-    height: 150px;
-    width: 150px;
-    font-size: 3rem;
-    background-color: rgb(204, 204, 204);
-    margin: 0px;
-}
-.search-bar{
-    display: flex;
-    height: 156px;
-    margin-top: 30px;
-
-}
-#s1{
-    width: 2700px;
-    font-size: 4rem;
-    color: rgb(109, 110, 110);
-}
-#s2{
-    width: 150px;
-    height: 157px;
-    font-size: 3rem;
-    background-color: rgb(239, 203, 43);
-}
-
-#s2:hover{
-    cursor: pointer;
-    background-color: rgb(244, 155, 47);
-}
-
-.flag{
-    margin-top: 60px;
-    margin-left: 40px;
-}
-.flag:hover{
-    cursor: pointer;
-}
-.lang{
-    font-size: 3.5rem;
-    margin-top: 80px;
-    margin-left: 20px;
-}
-.lang:hover{
-    cursor: pointer;
-}
-.sign{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-left: 120px;
-}
-.sign:hover{
-    cursor: pointer;
-}
-.small{
-    font-size: 3.5rem;
-}
-.big{
-    font-size: 4rem;
-}
-.return{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-left: 90px;
-}
-.return:hover{
-    cursor: pointer;
-}
-.ret{
-    font-size: 3.5rem;
-}
-.order{
-    font-size: 4rem;
-}
-.cart{
-    display: flex;
-    flex-direction: row;
-    margin-top: 100px;
-    font-size: 4rem;
-    margin-left: 140px;
-}
-.cart:hover{
-    cursor: pointer;
-}
-.cartt{
-    margin-left: 20px;
-}
-
+/* ================= SECOND NAV BAR ================= */
 .head{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     background-color: rgb(36, 46, 69);
     color: white;
-    height: 150px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
 }
 .ham{
     display: flex;
     flex-direction: row;
-    font-size: 4rem;
-    padding-left: 70px;
-    padding-top: 30px;
+    align-items: center;
+    font-size: 1.1rem;
+    padding-right: 1rem;
+    transition: transform 0.15s ease;
 }
 .ham:hover,.fresh:hover, .mx:hover, .sell:hover, .best:hover, .mob:hover, .amz:hover, .today:hover, .cust:hover,
 .new:hover, .prime:hover, .elec:hover, .fash:hover, .hoki:hover, .book:hover, .comp:hover {
     cursor: pointer;
-    padding-top: 35px;
+    transform: translateY(-3px);
 }
-.all{
-    margin-left: 20px;
-}
+.all{ margin-left: 0.4rem; font-size: 0.9rem; }
 .fresh, .mx, .sell, .best, .mob, .amz, .today, .cust, .new, .prime, .elec, .fash, .hoki, .book, .comp{
-    font-size: 4rem;
-    padding: 30px;
-    margin-left: 50px;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    transition: transform 0.15s ease;
 }
+
+/* ================= HERO / SALE BANNER ================= */
 .back{
     background-color: rgb(255, 215, 236);
-    height: 1200px;
+    min-height: 320px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
 }
-.back:hover{
-    cursor: pointer;
-}
+.back:hover{ cursor: pointer; }
 .bigsale{
-    margin-top: 180px;
-    margin-left: 1700px;
+    text-align: center;
 }
 .makeup{
-    height: 1000px;
-    width: 1300px;
-    margin-top: 90px;
-    margin-left: 200px;
+    height: auto;
+    max-width: 340px;
+    width: 100%;
+    margin: 1rem;
 }
-.sale{
-    font-size: 5rem;
-}
-#sp1{
-    font-family: 'Times New Roman', Times, serif;
-}
-#sp2{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.salee{
-    display: flex;
-    justify-content: center;
-}
-.top, .latest{
-    font-size: 5rem;
-    margin-top: 40px;
-    padding: 60px;
-}
-.Card{
-    display: flex;
-    background-color: white;
-    border: 1px solid black;
-}
-.card{
-    padding: 20px;
-}
-.unlimited{
-    font-size: 3rem;
-    margin-left: 40px;
-    padding: 20px;
-}
-.tandc{
-    font-size: 3rem;
-    align-content: start;
-}
-.boxes1{
+.sale{ font-size: 1.6rem; }
+#sp1{ font-family: 'Times New Roman', Times, serif; }
+#sp2{ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+.salee{ display: flex; justify-content: center; gap: 1rem; }
+.top, .latest{ font-size: 1.3rem; padding: 0.6rem 1rem; }
+.Card{ display: flex; background-color: white; border: 1px solid black; margin-top: 0.5rem; }
+.card{ padding: 0.5rem; }
+.card img{ height: 60px; width: auto; }
+.unlimited{ font-size: 1rem; margin-left: 0.5rem; padding: 0.5rem; }
+.tandc{ font-size: 0.9rem; text-align: right; }
+
+/* ================= PROMO BOXES (boxes1 / boxes2) ================= */
+.boxes1, .boxes2{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     background-color: rgb(225, 223, 223);
-    height: 1900px;
-    padding-top: 50px;
+    padding: 1rem;
+    gap: 1rem;
 }
 .box1, .box2, .box3, .box4{
-    width: 1450px;
-    height: 1800px;
-    font-size: 3.5rem;
+    flex: 1 1 280px;
+    min-height: 420px;
+    font-size: 1rem;
     background-color: white;
-    margin: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .revamp, .bulk, .app, .start{
-    width: 1500px;
-    margin-top: 50px;
-    margin-left: 80px;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    min-height: 5.5rem;
+    flex-shrink: 0;
+}
+.revamp span, .bulk span, .app span, .start span{
+    display: inline;
+}
+.revamp h2, .bulk h2, .app h2, .start h2{
+    display: inline;
+    font-size: inherit;
+    margin: 0;
+    line-height: 1.3;
 }
 .images{
     display: grid;
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 165px;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    align-content: start;
 }
-.img1{
-    grid-column: 1/2;
-    padding: 30px;
+.images img{
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    display: block;
 }
-.img2{
-    grid-column: 2/3;
-    padding: 30px;
-}
-.img3, .img4{
-    padding: 30px;
-}
-.i3{
-    margin-top: 55px;
-}
-.images:hover{
-    cursor: pointer;
-}
+.img1{ grid-column: 1/2; padding: 0.5rem; }
+.img2{ grid-column: 2/3; padding: 0.5rem; }
+.img3, .img4{ padding: 0.5rem; }
+.i3{ margin-top: 0.5rem; }
+.images:hover{ cursor: pointer; }
 .bluelink{
     text-align: left;
-    justify-content: baseline;
-    margin-left: 70px;
-    margin-top: 125px;
+    margin-left: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 3.5rem;
+    font-size: 1rem;
     color: rgb(74, 128, 176);
 }
-.bluelink:hover{
-    cursor: pointer;
-    color: black;
-}
-.b2{
-    margin-top: 55px;
-}
-.boxes2{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(225, 223, 223);
-    height: 1900px;
-}
+.bluelink:hover{ cursor: pointer; color: black; }
+.b2{ margin-top: 0; }
+
+/* ================= IMAGE STRIP SECTIONS (boxes3-6) ================= */
 .boxes3, .boxes4, .boxes5, .boxes6{
     background-color: rgb(225, 223, 223);
-    height: 1200px;
-    margin-top: 60px;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
 }
 .b3{
     color: rgb(74, 128, 176);
-    margin-top: 25px;
-    margin-left: 80px;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
 }
-.b3:hover{
-     cursor: pointer;
-    color: black;
-}
+.b3:hover{ cursor: pointer; color: black; }
 .bikes, .startt{
-    font-size: 4rem;
+    font-size: 1.3rem;
     display: flex;
-    margin-top:px;
-    padding-left: 80px;
-    padding-bottom: 60px;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
     background-color: white;
-} 
+}
 .imgg{
     display: flex;
-    padding-left: 30px;
-    height: 950px;
-    background-color: white
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem;
+    background-color: white;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-.imgg1{
-    margin: 25px;
+.imgg::-webkit-scrollbar{
+    display: none;
 }
-.bikes:hover, .startt:hover, .imgg, .imgg1{
-    cursor: pointer;
+.imgg1, .imgg2, .imgg3, .imgg4, .imgg5{
+    margin: 0.5rem;
+    height: 220px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
-.bp{
-    text-align: center;
+.imgg1 img, .imgg2 img, .imgg3 img, .imgg4 img, .imgg5 img{
+    height: 100%;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+    display: block;
 }
+.bikes:hover, .startt:hover, .imgg, .imgg1{ cursor: pointer; }
+.bp{ text-align: center; }
+
+/* ================= SIGN-IN PROMPT ================= */
 .close{
-justify-items: center;
-font-size: 4rem;
-padding: 80px;
-margin: 60px;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .signin{
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: rgb(233, 201, 61);
-    height: 100px;
-    width: 700px;
+    max-width: 160px;
+    width: 100%;
     text-align: center;
-    justify-content: center;
-    align-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
+    font-size: 0.9rem;
 }
-.neww{
-    text-align: center;
-    font-size: 3rem;
-}
-.ahref:hover{
-    cursor: pointer;
-    color: rgb(27, 43, 57);
-}
-.ahref{
-    color: rgb(53, 110, 159);
-}
-.signin:hover{
-    cursor: pointer;
-    background-color: rgb(222, 165, 59);
-}
+.neww{ font-size: 1rem; }
+.ahref{ color: rgb(53, 110, 159); }
+.ahref:hover{ cursor: pointer; color: rgb(27, 43, 57); }
+.signin:hover{ cursor: pointer; background-color: rgb(222, 165, 59); }
+
+/* ================= BACK TO TOP ================= */
 .backk{
     display: flex;
     color: white;
     background-color: rgb(44, 60, 79);
     text-align: center;
     justify-content: center;
-    height: 220px;
-    font-size: 3.5rem;
+    align-items: center;
+    height: 70px;
+    font-size: 1.1rem;
 }
-.backk:hover{
-    cursor: pointer;
-    background-color: rgb(56, 76, 100);
-}
-.backkk{
-    align-content: center;
+.backk:hover{ cursor: pointer; background-color: rgb(56, 76, 100); }
+.backkk{ align-content: center; }
+
+/* ================= FOOTER ================= */
+.bottom{
+    background-color: rgb(28, 42, 55);
+    min-height: auto;
+    padding-bottom: 1rem;
 }
 .bottomm{
     display: flex;
-    background-color: rgbrgb(18, 43, 66);
+    flex-wrap: wrap;
+    background-color: rgb(18, 43, 66);
     color: white;
-    font-size: 3.5rem;
+    font-size: 1rem;
     justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 190px;
+    padding: 2.5rem 1rem;
+    gap: 2rem;
 }
-.bottom{
-    background-color: rgb(28, 42, 55);
-    height: 2200px;
-}
-.botto:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-.h3:hover{
+.bot1{ max-width: 220px; }
+.botto:hover{ cursor: pointer; text-decoration: underline; }
+.h3:hover{ cursor: pointer; }
 
-    cursor: pointer;
-}
-.amzi{
-    margin: 20px;
-    margin-left: 2000px;
-}
 .closing{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
     color: white;
-    font-size: 3rem;
+    font-size: 1rem;
+    padding: 1rem;
 }
-.langg{
-     border: 1px solid white;
-     font-family: Arial, Helvetica, sans-serif;
-     height: 120px;
-     width: 260px;
-     text-align: center;
-     align-content: center;
-     margin-top: 130px;
-     margin-left: 450px;
-}
-.amzi:hover{
-    cursor: pointer;
-}
-.langg:hover{
-    cursor: pointer;
-}
-.india:hover{
-    cursor: pointer;
-}
-.india{
+.amzi{ margin: 0; }
+.amzi img{ height: 60px; width: auto; }
+.langg, .india{
     border: 1px solid white;
-     font-family: Arial, Helvetica, sans-serif;
-     height: 120px;
-     width: 260px;
-     text-align: center;
-     align-content: center;
-     margin-top: 130px;
-     display: flex;
-     margin-left: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
-.flagg{
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.indiaa{
-    margin-top: 32px;
-}
+.langg:hover, .india:hover{ cursor: pointer; }
+.flagg{ display: flex; align-items: center; }
+.flagg img{ height: 20px; width: auto; }
+.indiaa{ margin: 0; }
+
 .last{
     background-color: rgb(25, 35, 44);
     color: white;
-    font-size: 3.5rem;
+    font-size: 1rem;
 }
 .lastt{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 100px;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
 }
+.last1{ max-width: 200px; }
+.last1:hover{ cursor: pointer; }
 .lastt1{
-    justify-content: center;
     text-align: center;
-    padding-bottom: 100px;
-    padding-top: 60px;
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
 }
-.last1:hover{
-    cursor: pointer;
-    text-decoration: underline;
+.hover:hover{ cursor: pointer; text-decoration: underline; }
+
+/* ===================================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================================== */
+
+/* ---- TABLET ---- */
+@media (max-width: 1024px){
+    .location, .sign, .return{ display: none; } /* free up header space */
+    .search-bar{ order: 3; flex-basis: 100%; margin-top: 0.5rem; }
+    .header{ flex-wrap: wrap; height: auto; }
+
+    .boxes1, .boxes2{ flex-direction: column; }
+    .box1, .box2, .box3, .box4{ flex: 1 1 auto; min-height: auto; }
+    .images{ grid-template-columns: 1fr 1fr; }
+
+    .back{ flex-direction: column; text-align: center; }
+    .bigsale{ margin: 0 auto; text-align: center; }
+    .makeup{ max-width: 260px; }
+
+    .bottomm{ padding: 2rem 1rem; }
 }
-.hover:hover{
-    cursor: pointer;
-    text-decoration: underline;
+
+/* ---- MOBILE ---- */
+@media (max-width: 600px){
+    .flag, .lang{ display: none; }
+    .cartt{ display: none; }
+    .loc{ display: none; }
+
+    .fresh, .mx, .sell, .best, .mob, .amz, .today, .cust, .new, .prime, .elec, .fash, .hoki, .book, .comp{
+        font-size: 0.75rem;
+        padding: 0.3rem 0.5rem;
+    }
+    .ham{ font-size: 0.9rem; padding-right: 0.5rem; }
+    .all{ font-size: 0.8rem; }
+
+    .images{ grid-template-columns: 1fr; }
+    .img2{ grid-column: 1/2; }
+
+    .sale{ font-size: 1.2rem; }
+    .top, .latest{ font-size: 1rem; padding: 0.4rem 0.6rem; }
+    .unlimited{ font-size: 0.85rem; }
+
+    .bikes, .startt{ font-size: 1rem; padding: 0.8rem 1rem; }
+    .imgg1, .imgg2, .imgg3, .imgg4, .imgg5{ height: 130px; }
+    .imgg1 img, .imgg2 img, .imgg3 img, .imgg4 img, .imgg5 img{ max-width: 160px; }
+
+    .close{ font-size: 1rem; padding: 1.5rem 1rem; }
+    .signin{ max-width: 100%; }
+
+    .lastt{ flex-direction: column; align-items: center; padding: 1.5rem 1rem; }
+    .bottomm{ flex-direction: column; align-items: center; text-align: center; }
 }
