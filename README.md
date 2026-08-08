@@ -1,6 +1,6 @@
-# Amazon Clone
+# Amazon Styled Shopping Website Clone
 
-A frontend Amazon clone built from scratch using HTML and CSS.
+A frontend Shopping Website clone built from scratch using HTML and CSS.
 
 ## Features
 
